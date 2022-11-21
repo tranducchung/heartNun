@@ -220,9 +220,6 @@ var ParticlePool = (function() {
         mainText.style.left = (canvas.clientWidth/2 - 80) + 'px'
         setTimeout(() => {
             mainText.style.display = ''
-            const audio = document.getElementById('myAudio');
-            console.log(audio)
-            audio.play()
         }, 1000)
     }
     function setText() {
@@ -237,6 +234,5 @@ var ParticlePool = (function() {
         onResize();
         render();
         setText();
-
     }, 100);
 })(document.getElementById('pinkboard'));
