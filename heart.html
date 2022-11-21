@@ -23,15 +23,18 @@
             font-family: cursive;
             cursor: grabbing;
         }
+        audio {
+            filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+            width: 200px;
+            height: 25px;
+        }
     </style>
 </head>
 <body>
 <div>
     <canvas id="pinkboard" width="1440" height="369">
     </canvas>
-    <video id="myAudio" autoplay loop style="display: none">
-        <source src="music/videoFile.mp4" type="video/mp4">
-    </video>
+    <audio src="music/TiengPhaoTienNguoi-HungQuan-7612646.mp3" autoplay></audio>
     <div id="main-text"></div>
     <img alt="" id="Nun-img" src="music/174654106_2111191852365462_7901235048001477695_n.jpeg">
 </div>
