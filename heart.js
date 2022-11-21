@@ -217,14 +217,14 @@ var ParticlePool = (function() {
         mainText.style.display = 'none '
         canvas.width  = canvas.clientWidth;
         canvas.height = canvas.clientHeight;
-        mainText.style.top = (canvas.clientHeight/2 - 41) + 'px'
+        mainText.style.top = (canvas.clientHeight/2 - 65) + 'px'
         mainText.style.left = (canvas.clientWidth/2 - 115) + 'px'
         imgDom.style.width = canvas.clientWidth + 'px'
         imgDom.style.height = canvas.clientHeight + 'px'
-        setTimeout(() => {
-            const a = document.getElementById('my-audio')
-            a.play();
-        }, 5000)
+        const audioDom = document.getElementById('my-audio')
+        audioDom.play();
+        audioDom.style.top = (canvas.clientHeight/2 + 250) + 'px';
+        audioDom.style.left = (canvas.clientWidth/2 - 150) + 'px'
         setTimeout(() => {
             mainText.style.display = ''
         }, 1000)
