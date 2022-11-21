@@ -213,11 +213,14 @@ var ParticlePool = (function() {
     // handle (re-)sizing of the canvas
     function onResize() {
         const mainText = document.getElementById('main-text')
+        const imgDom = document.getElementById('Nun-img')
         mainText.style.display = 'none '
         canvas.width  = canvas.clientWidth;
         canvas.height = canvas.clientHeight;
-        mainText.style.top = (canvas.clientHeight/2 - 28) + 'px'
-        mainText.style.left = (canvas.clientWidth/2 - 80) + 'px'
+        mainText.style.top = (canvas.clientHeight/2 - 41) + 'px'
+        mainText.style.left = (canvas.clientWidth/2 - 115) + 'px'
+        imgDom.style.width = canvas.clientWidth + 'px'
+        imgDom.style.height = canvas.clientHeight + 'px'
         setTimeout(() => {
             mainText.style.display = ''
         }, 1000)
@@ -227,7 +230,6 @@ var ParticlePool = (function() {
         mainText.append('Hải Ninhh')
     }
     window.onresize = onResize;
-
 
     // delay rendering bootstrap
     setTimeout(function() {
