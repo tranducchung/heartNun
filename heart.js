@@ -221,10 +221,16 @@ var ParticlePool = (function() {
         mainText.style.left = (canvas.clientWidth/2 - 115) + 'px'
         imgDom.style.width = canvas.clientWidth + 'px'
         imgDom.style.height = canvas.clientHeight + 'px'
+        const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
         const audioDom = document.getElementById('my-audio')
         audioDom.play();
-        audioDom.style.top = (canvas.clientHeight/2 + 250) + 'px';
-        audioDom.style.left = (canvas.clientWidth/2 - 150) + 'px'
+        if (isChrome) {
+            audioDom.style.top = (canvas.clientHeight/2 + 250) + 'px';
+            audioDom.style.left = (window.innerWidth/2 - 140) + 'px'
+        } else {
+            audioDom.style.top = (canvas.clientHeight/2 + 250) + 'px';
+            audioDom.style.left = (window.innerWidth/2 - 120) + 'px'
+        }
         setTimeout(() => {
             mainText.style.display = ''
         }, 1000)
