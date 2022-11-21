@@ -221,8 +221,10 @@ var ParticlePool = (function() {
         mainText.style.left = (canvas.clientWidth/2 - 115) + 'px'
         imgDom.style.width = canvas.clientWidth + 'px'
         imgDom.style.height = canvas.clientHeight + 'px'
-        const a = document.getElementById('my-audio')
-        a.play();
+        setTimeout(() => {
+            const a = document.getElementById('my-audio')
+            a.play();
+        }, 5000)
         setTimeout(() => {
             mainText.style.display = ''
         }, 1000)
